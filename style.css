@@ -1,0 +1,37 @@
+:root {
+    --body-bg: #123;
+    --nav-bg: rgb(69, 92, 115);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: system-ui;
+}
+
+body {
+    min-height: 200vh;
+    margin: 0;
+    font-size: 1.25rem;
+    background-color: var(--body-bg);
+    color: white;
+
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    gap: 2rem;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    max-height: 100svh;
+    background-color: var(--nav-bg);
+}
+
+nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
