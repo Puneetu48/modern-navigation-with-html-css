@@ -19,8 +19,8 @@ body {
     color: white;
 
     display: grid;
-    grid-template-columns: 20rem 1fr;
-    gap: 2rem;
+    grid-template-columns: 15rem 1fr;
+    gap: 4rem;
 }
 
 nav {
@@ -36,9 +36,9 @@ nav {
     margin: 0;
 
     display: grid;
-    gap: 4rem;
+    gap: 2rem;
     padding-block: 2rem;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .nav-list li {
@@ -49,6 +49,30 @@ nav {
 
 .nav-list li.active {
     background-color: var(--body-bg);
+    position: relative;
+}
+
+.nav-list li.active::before,
+.nav-list li.active::after {
+    --border-radius: 1rem;
+
+    content: '';
+    position: absolute;
+    width: var(--border-radius);
+    height: var(--border-radius);
+    right: 0;
+    background: var(--nav-bg);
+}
+
+.nav-list li.active::before {
+    top: calc(var(--border-radius) * -1);
+    border-radius: 0 0 100vw 0;
+    box-shadow: 10px 10px 0 10px var(--body-bg);
+}
+.nav-list li.active::after {
+    border-radius: 0 100vw 0 0;
+    box-shadow: 10px -10px 0 10px var(--body-bg);
+    bottom: calc(var(--border-radius) * -1);
 }
 
 .nav-list a {
