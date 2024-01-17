@@ -30,8 +30,28 @@ nav {
     background-color: var(--nav-bg);
 }
 
-nav-list {
+.nav-list {
     list-style: none;
     padding: 0;
     margin: 0;
+
+    display: grid;
+    gap: 4rem;
+    padding-block: 2rem;
+    font-size: 2rem;
+}
+
+.nav-list li {
+    padding: 1rem 2rem;
+    margin-left: 2rem;
+    border-radius: 100vw 0 0 100vw;
+}
+
+.nav-list li.active {
+    background-color: var(--body-bg);
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
 }
